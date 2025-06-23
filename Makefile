@@ -50,3 +50,9 @@ clean: ## Remove build artifacts
 
 	@echo "Remove mypy cache"
 	@rm -rf .mypy_cache/
+
+	@echo "Remove coverage cache"
+	@rm -rf .coverage
+
+	@echo "Remove reports files"
+	@rm -rf reports/
