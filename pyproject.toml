@@ -13,3 +13,6 @@ dependencies = []
 hooks = [
     "pre-commit>=4.2.0",
 ]
+format = [
+    "ruff>=0.12.0",
+]
