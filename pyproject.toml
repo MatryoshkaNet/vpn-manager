@@ -104,3 +104,26 @@ lines-between-types = 1                 # Empty lines between imports
 
 [tool.ruff.lint.pydocstyle]
 convention = "pep257"                   # Use PEP 257 docstring convention
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+pythonpath = [
+    "src",
+]
+addopts = [
+    "--strict-markers",
+    "--disable-warnings",
+    "--tb=short",
+    "--asyncio-mode=auto",
+
+    "--html=reports/tests/index.html",
+
+    "--cov=src",
+    "--cov-report=html",
+
+]
+
+[tool.coverage.html]
+directory = "reports/coverage"
