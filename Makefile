@@ -31,6 +31,16 @@ lint-code: ## Lint code
 	@$(UV_RUN) mypy --pretty
 	@$(UV_RUN) ruff check --no-fix
 
+.PHONY: tests
+tests: ## Run tests
+	@echo "Run tests"
+	@$(UV_RUN) pytest
+
+.PHONY: coverage
+coverage: tests # Run coverage tests
+	@echo "Run coverage tests"
+	@$(UV_RUN) coverage html
+
 .PHONY: clean
 clean: ## Remove build artifacts
 	@echo "Remove build artifacts"
