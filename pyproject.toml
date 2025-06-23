@@ -16,3 +16,7 @@ hooks = [
 format = [
     "ruff>=0.12.0",
 ]
+lint = [
+    "mypy>=1.16.1",
+    "ruff>=0.12.0",
+]
