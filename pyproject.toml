@@ -8,3 +8,8 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = []
+
+[project.optional-dependencies]
+hooks = [
+    "pre-commit>=4.2.0",
+]
