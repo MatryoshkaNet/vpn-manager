@@ -7,7 +7,9 @@ authors = [
     { name = "Vlad Korneev", email = "veenrok@veenrok.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "structlog>=25.4.0",
+]
 
 [project.optional-dependencies]
 hooks = [
