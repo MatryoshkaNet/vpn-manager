@@ -346,6 +346,15 @@ wheels = [
 ]
 
 [[package]]
+name = "uuid6"
+version = "2025.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/3f/49/06a089c184580f510e20226d9a081e4323d13db2fbc92d566697b5395c1e/uuid6-2025.0.0.tar.gz", hash = "sha256:bb78aa300e29db89b00410371d0c1f1824e59e29995a9daa3dedc8033d1d84ec", size = 13941, upload-time = "2025-06-11T20:02:05.324Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0a/50/4da47101af45b6cfa291559577993b52ee4399b3cd54ba307574a11e4f3a/uuid6-2025.0.0-py3-none-any.whl", hash = "sha256:2c73405ff5333c7181443958c6865e0d1b9b816bb160549e8d80ba186263cb3a", size = 7001, upload-time = "2025-06-11T20:02:04.521Z" },
+]
+
+[[package]]
 name = "virtualenv"
 version = "20.31.2"
 source = { registry = "https://pypi.org/simple" }
@@ -363,6 +372,9 @@ wheels = [
 name = "vpn-manager"
 version = "0.1.0"
 source = { virtual = "." }
+dependencies = [
+    { name = "uuid6" },
+]
 
 [package.optional-dependencies]
 format = [
@@ -392,5 +404,6 @@ requires-dist = [
     { name = "pytest-html", marker = "extra == 'tests'", specifier = ">=4.1.1" },
     { name = "ruff", marker = "extra == 'format'", specifier = ">=0.12.0" },
     { name = "ruff", marker = "extra == 'lint'", specifier = ">=0.12.0" },
+    { name = "uuid6", specifier = ">=2025.0.0" },
 ]
 provides-extras = ["hooks", "format", "lint", "tests"]
