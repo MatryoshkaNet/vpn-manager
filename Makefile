@@ -23,7 +23,7 @@ install: install-uv install-depends install-pre-commit ## Install dependencies a
 .PHONY: format
 format-code: ## Format code
 	@echo "Run formatters"
-	@$(UV_RUN) ruff format --show-fixes --preview
+	@$(UV_RUN) ruff format --preview
 
 .PHONY: lint
 lint-code: ## Lint code
