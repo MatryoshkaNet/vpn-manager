@@ -28,6 +28,14 @@ tests = [
     "pytest-cov>=6.2.1",
     "pytest-html>=4.1.1",
 ]
+docs = [
+    "sphinx>=8.2.3",
+    "sphinx-autobuild>=2024.10.3",
+    "sphinx-copybutton>=0.5.2",
+    "sphinx-intl>=2.3.1",
+    "furo>=2024.8.6",
+    "pygments>=2.19.2",
+]
 
 [tool.mypy]
 python_version = 3.13                   # Target Python version (3.13)
