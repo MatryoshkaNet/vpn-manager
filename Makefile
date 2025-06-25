@@ -1,5 +1,8 @@
 UV_RUN = uv run
 
+DOCS_SOURCE_DIR = docs/source/
+DOCS_BUILD_DIR = docs/build/
+
 .PHONY: install-uv
 install-uv: ## Install uv if missing
 	@echo "Install uv."
@@ -40,6 +43,11 @@ tests: ## Run tests
 coverage: tests # Run coverage tests
 	@echo "Run coverage tests"
 	@$(UV_RUN) coverage html
+
+.PHONY: docs-serve
+docs-serve: ## Run docs serve
+	@echo "Run docs serve"
+	@$(UV_RUN) sphinx-autobuild $(DOCS_SOURCE_DIR) $(DOCS_BUILD_DIR)
 
 .PHONY: clean
 clean: ## Remove build artifacts
