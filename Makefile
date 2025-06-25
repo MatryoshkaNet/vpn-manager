@@ -64,3 +64,6 @@ clean: ## Remove build artifacts
 
 	@echo "Remove reports files"
 	@rm -rf reports/
+
+	@echo "Delete docs build files"
+	@rm -rf $(DOCS_BUILD_DIR)
